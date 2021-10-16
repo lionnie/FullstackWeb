@@ -16,6 +16,7 @@
   </head>
 
   <body>
+    <!-- Navigation -->
     <nav
       class="
         navbar navbar-expand-lg navbar-light navbar-store
@@ -25,35 +26,38 @@
       data-aos="fade-down"
     >
       <div class="container">
-        <a href="/index.html" class="navbar-brand">
-          <img src="/images/logo.svg" alt="Logo" />
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo.svg" alt="" />
         </a>
         <button
           class="navbar-toggler"
           type="button"
-          data-toggler="collapse"
+          data-toggle="collapse"
           data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="/index.html" class="nav-link">Home</a>
+              <a class="nav-link" href="/">Home </a>
             </li>
             <li class="nav-item active">
-              <a href="/categories.html" class="nav-link">Categories</a>
+              <a class="nav-link" href="/categories.html">Categories</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Rewards</a>
+              <a class="nav-link" href="#">Rewards</a>
             </li>
             <li class="nav-item">
-              <a href="/register.html" class="nav-link">Sign Up</a>
+              <a class="nav-link" href="/register.html">Sign Up</a>
             </li>
             <li class="nav-item">
               <a
-                href="/login.html"
                 class="btn btn-success nav-link px-4 text-white"
+                href="/login.html"
                 >Sign In</a
               >
             </li>
@@ -63,7 +67,7 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="page-content page-home">
+    <div class="page-content page-categories">
       <section class="store-trend-categories">
         <div class="container">
           <div class="row">
@@ -77,15 +81,15 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <a href="#" class="component-categories d-block">
+              <a class="component-categories d-block" href="#">
                 <div class="categories-image">
                   <img
                     src="/images/categories-gadgets.svg"
-                    alt=""
+                    alt="Gadgets Categories"
                     class="w-100"
                   />
                 </div>
-                <p class="categories-text">Gadget</p>
+                <p class="categories-text">Gadgets</p>
               </a>
             </div>
             <div
@@ -93,15 +97,15 @@
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <a href="#" class="component-categories d-block">
+              <a class="component-categories d-block" href="#">
                 <div class="categories-image">
                   <img
                     src="/images/categories-furniture.svg"
-                    alt=""
+                    alt="Furniture Categories"
                     class="w-100"
                   />
                 </div>
-                <p class="categories-text">Funiture</p>
+                <p class="categories-text">Furniture</p>
               </a>
             </div>
             <div
@@ -109,15 +113,15 @@
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <a href="#" class="component-categories d-block">
+              <a class="component-categories d-block" href="#">
                 <div class="categories-image">
                   <img
                     src="/images/categories-makeup.svg"
-                    alt=""
+                    alt="Makeup Categories"
                     class="w-100"
                   />
                 </div>
-                <p class="categories-text">Make Up</p>
+                <p class="categories-text">Makeup</p>
               </a>
             </div>
             <div
@@ -125,11 +129,11 @@
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              <a href="#" class="component-categories d-block">
+              <a class="component-categories d-block" href="#">
                 <div class="categories-image">
                   <img
                     src="/images/categories-sneaker.svg"
-                    alt=""
+                    alt="Sneaker Categories"
                     class="w-100"
                   />
                 </div>
@@ -141,11 +145,11 @@
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              <a href="#" class="component-categories d-block">
+              <a class="component-categories d-block" href="#">
                 <div class="categories-image">
                   <img
                     src="/images/categories-tools.svg"
-                    alt=""
+                    alt="Tools Categories"
                     class="w-100"
                   />
                 </div>
@@ -157,9 +161,13 @@
               data-aos="fade-up"
               data-aos-delay="600"
             >
-              <a href="#" class="component-categories d-block">
+              <a class="component-categories d-block" href="#">
                 <div class="categories-image">
-                  <img src="/images/categories-baby.svg" alt="" class="w-100" />
+                  <img
+                    src="/images/categories-baby.svg"
+                    alt="Baby Categories"
+                    class="w-100"
+                  />
                 </div>
                 <p class="categories-text">Baby</p>
               </a>
@@ -167,7 +175,6 @@
           </div>
         </div>
       </section>
-
       <section class="store-new-products">
         <div class="container">
           <div class="row">
@@ -181,25 +188,25 @@
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <a href="/details.html" class="component-products d-block">
-                <div class="products-thumbnail"> 
+              <a class="component-products d-block" href="/details.html">
+                <div class="products-thumbnail">
                   <div
                     class="products-image"
                     style="
-                      background-image: url(/images/products-apple-watch.jpg);
+                      background-image: url('/images/products-apple-watch.jpg');
                     "
                   ></div>
                 </div>
                 <div class="products-text">Apple Watch 4</div>
                 <div class="products-price">$890</div>
-            </a>
+              </a>
             </div>
-             <div
+            <div
               class="col-6 col-md-4 col-lg-3"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <a href="/details.html" class="component-products d-block">
+              <a class="component-products d-block" href="/details.html">
                 <div class="products-thumbnail">
                   <div
                     class="products-image"
@@ -210,14 +217,14 @@
                 </div>
                 <div class="products-text">Orange Bogotta</div>
                 <div class="products-price">$94,509</div>
-            </a>
+              </a>
             </div>
-             <div
+            <div
               class="col-6 col-md-4 col-lg-3"
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <a href="/details.html" class="component-products d-block">
+              <a class="component-products d-block" href="/details.html">
                 <div class="products-thumbnail">
                   <div
                     class="products-image"
@@ -226,16 +233,16 @@
                     "
                   ></div>
                 </div>
-                <div class="products-text">Soya Ternyaman</div>
-                <div class="products-price">$1,490</div>
-            </a>
+                <div class="products-text">Sofa Ternyaman</div>
+                <div class="products-price">$1,409</div>
+              </a>
             </div>
-             <div
+            <div
               class="col-6 col-md-4 col-lg-3"
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              <a href="/details.html" class="component-products d-block">
+              <a class="component-products d-block" href="/details.html">
                 <div class="products-thumbnail">
                   <div
                     class="products-image"
@@ -244,16 +251,16 @@
                     "
                   ></div>
                 </div>
-                <div class="products-text">Bubuk Marketti</div>
+                <div class="products-text">Bubuk Maketti</div>
                 <div class="products-price">$225</div>
-            </a>
+              </a>
             </div>
-             <div
+            <div
               class="col-6 col-md-4 col-lg-3"
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              <a href="/details.html" class="component-products d-block">
+              <a class="component-products d-block" href="/details.html">
                 <div class="products-thumbnail">
                   <div
                     class="products-image"
@@ -264,14 +271,14 @@
                 </div>
                 <div class="products-text">Tatakan Gelas</div>
                 <div class="products-price">$45,184</div>
-            </a>
+              </a>
             </div>
-             <div
+            <div
               class="col-6 col-md-4 col-lg-3"
               data-aos="fade-up"
               data-aos-delay="600"
             >
-              <a href="/details.html" class="component-products d-block">
+              <a class="component-products d-block" href="/details.html">
                 <div class="products-thumbnail">
                   <div
                     class="products-image"
@@ -282,14 +289,14 @@
                 </div>
                 <div class="products-text">Mavic Kawe</div>
                 <div class="products-price">$503</div>
-            </a>
+              </a>
             </div>
-             <div
+            <div
               class="col-6 col-md-4 col-lg-3"
               data-aos="fade-up"
               data-aos-delay="700"
             >
-              <a href="/details.html" class="component-products d-block">
+              <a class="component-products d-block" href="/details.html">
                 <div class="products-thumbnail">
                   <div
                     class="products-image"
@@ -300,14 +307,14 @@
                 </div>
                 <div class="products-text">Black Edition Nike</div>
                 <div class="products-price">$70,482</div>
-            </a>
+              </a>
             </div>
-             <div
+            <div
               class="col-6 col-md-4 col-lg-3"
               data-aos="fade-up"
               data-aos-delay="800"
             >
-              <a href="/details.html" class="component-products d-block">
+              <a class="component-products d-block" href="/details.html">
                 <div class="products-thumbnail">
                   <div
                     class="products-image"
@@ -318,8 +325,9 @@
                 </div>
                 <div class="products-text">Monkey Toys</div>
                 <div class="products-price">$783</div>
-            </a>
+              </a>
             </div>
+          </div>
         </div>
       </section>
     </div>
@@ -328,9 +336,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <p class="pt-4 pb-2">
-              2020 Copyright Store. All Rights Reseverd.
-            </p>
+            <p class="pt-4 pb-2">2019 Copyright Store. All Rights Reserved.</p>
           </div>
         </div>
       </div>
