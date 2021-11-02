@@ -80,5 +80,16 @@ Route::get("/dashboard/account", [
     App\Http\Controllers\DashboardSettingController::class,
     "account",
 ])->name("dashboard-settings-account");
+
+//->midlleware({'auth','admin'})
+
+Route::prefix('admin')
+    ->namespace('Admin')
+    ->group(function() {
+    Route::get("/", [
+        App\Http\Controllers\Admin\DashboardController::class,
+        "index",
+    ])->name("admin-dashboard");
+    });
 Auth::routes();
 

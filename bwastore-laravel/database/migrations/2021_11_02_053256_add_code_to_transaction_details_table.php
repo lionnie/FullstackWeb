@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoriesTable extends Migration
+class AddCodeToTransactionDetailsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,8 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->string('photo');
-            $table->string('slug');
-
-            $table->softDeletes();
-            $table->timestamps();
+        Schema::table('transaction_details', function (Blueprint $table) {
+            $table->string('code');
         });
     }
 
@@ -31,6 +25,8 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::table('transaction_details', function (Blueprint $table) {
+            $table->dropColumn('code');
+        });
     }
 }
