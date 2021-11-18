@@ -86,10 +86,8 @@ Route::get("/dashboard/account", [
 Route::prefix('admin')
     ->namespace('Admin')
     ->group(function() {
-    Route::get("/", [
-        App\Http\Controllers\Admin\DashboardController::class,
-        "index",
-    ])->name("admin-dashboard");
-    });
-Auth::routes();
+    Route::get("/", [App\Http\Controllers\Admin\DashboardController::class,"index",])->name("admin-dashboard");
+    Route::resource('category', '\App\Http\Controllers\Admin\CategoryController');
+});
+//Auth::routes();
 
