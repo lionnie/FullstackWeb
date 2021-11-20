@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Store Dashboard
+    Category
 @endsection
 
 @section('content')
@@ -29,11 +29,11 @@
                                 <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
                                     <thead>
                                     <tr>
-                                        <th id="">ID </th>
+                                        <th id="">ID</th>
                                         <th id="">Nama</th>
-                                        <th id="">Foto </th>
-                                        <th id="">Slug </th>
-                                        <th id="">Aksi </th>
+                                        <th id="">Foto</th>
+                                        <th id="">Slug</th>
+                                        <th id="">Aksi</th>
                                     </tr>
                                     </thead>
                                     <tbody></tbody>
