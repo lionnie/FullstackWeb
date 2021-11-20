@@ -48,8 +48,9 @@
               >Transactions</a
             >
             <a
-              href=#
+              href="{{route('user.index')  }}"
               class="list-group-item list-group-item-action"
+              class="list-group-item list-group-item-action {{  (request()->is('admin/users*')) ? 'active' : '' }}"
               >Users</a
             >
             <a href=#
