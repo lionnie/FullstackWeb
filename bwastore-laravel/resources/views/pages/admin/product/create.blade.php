@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-        <h2 class="dashboard-title">User</h2>
+        <h2 class="dashboard-title">Product Gallery</h2>
         <p class="dashboard-subtitle">
-            Create New User
+            Create New Product Gallery
         </p>
     </div>
     <div class="dashboard-content">
@@ -29,36 +29,25 @@
                   </ul>
               </div>
           @endif
-          <form action="{{ route('user.store') }}" method="post" enctype="multipart/form-data">
+          <form action="{{ route('product-gallery.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="card">
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Nama User</label>
-                      <input type="text" class="form-control" name="name" required />
+                      <label>Product</label>
+                      <select name="products_id" class="form-control">
+                        @foreach ($products as $product)
+                          <option value="{{ $product->id }}">{{ $product->name }}</option>
+                        @endforeach
+                      </select>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Email User</label>
-                      <input type="text" class="form-control" name="email" required />
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Password User</label>
-                      <input type="password" class="form-control" name="password" required />
-                    </div>
-                  </div>
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <label>Roles</label>
-                      <select name="roles" required class="form-control">
-                          <option value="ADMIN">Admin</option>
-                          <option value="USER">User</option>
-                        </select>
+                      <label>Foto</label>
+                      <input type="file" class="form-control" name="photos" placeholder="Photo" required />
                     </div>
                   </div>
                 </div>

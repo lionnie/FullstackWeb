@@ -12,9 +12,9 @@
 >
   <div class="container-fluid">
     <div class="dashboard-heading">
-        <h2 class="dashboard-title">User</h2>
+        <h2 class="dashboard-title">Product</h2>
         <p class="dashboard-subtitle">
-            Edit "{{ $item->name }}" User
+            Edit "{{ $item->name }}" Product
         </p>
     </div>
     <div class="dashboard-content">
@@ -29,7 +29,7 @@
                   </ul>
               </div>
           @endif
-          <form action="{{ route('user.update', $item->id) }}" method="post" enctype="multipart/form-data">
+          <form action="{{ route('product.update', $item->id) }}" method="post" enctype="multipart/form-data">
             @method('PUT')
             @csrf
             <div class="card">
@@ -37,31 +37,44 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Nama User</label>
+                      <label>Nama Product</label>
                       <input type="text" class="form-control" name="name" value="{{ $item->name }}" required />
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Email User</label>
-                      <input type="text" class="form-control" name="email" value="{{ $item->email }}" required />
+                      <label>Pemilik Product</label>
+                      <select name="users_id" class="form-control">
+                        <option value="{{ $item->users_id }}">{{ $item->user->name }}</option>
+                        <option value="" disabled>----------------</option>
+                        @foreach ($users as $user)
+                          <option value="{{ $user->id }}">{{ $user->name }}</option>
+                        @endforeach
+                      </select>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Password User</label>
-                      <input type="password" class="form-control" name="password" />
-                      <small>Kosongkan jika tidak ingin mengganti password</small>
+                      <label>Kategori Product</label>
+                      <select name="categories_id" class="form-control">
+                        <option value="{{ $item->categories_id }}">{{ $item->category->name }}</option>
+                        <option value="" disabled>----------------</option>
+                        @foreach ($categories as $categories)
+                          <option value="{{ $categories->id }}">{{ $categories->name }}</option>
+                        @endforeach
+                      </select>
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Roles</label>
-                      <select name="roles" required class="form-control">
-                          <option value="{{ $item->roles }}" selected>Tidak diganti</option>
-                          <option value="ADMIN">Admin</option>
-                          <option value="USER">User</option>
-                        </select>
+                      <label>Harga</label>
+                      <input type="number" class="form-control" name="price" value="{{ $item->price }}" required />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label>Deskripsi</label>
+                      <textarea name="description" id="editor">{!! $item->description !!}</textarea>
                     </div>
                   </div>
                 </div>
@@ -83,3 +96,11 @@
   </div>
 </div>
 @endsection
+
+
+@push('addon-script')
+  <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+  <script>
+    CKEDITOR.replace('editor');
+  </script>
+@endpush
