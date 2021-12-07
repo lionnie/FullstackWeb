@@ -18,7 +18,6 @@ class AddResiAndShippingStatusToTransactionDetailsTable extends Migration
             $table->string('resi');
         });
     }
-
     /**
      * Reverse the migrations.
      *
