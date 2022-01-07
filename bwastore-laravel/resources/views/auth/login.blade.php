@@ -14,7 +14,8 @@
               />
             </div>
             <div class="col-lg-5">
-              <h2>Belanja kebutuhan utama, <br />menjadi lebih mudah</h2>
+              <h2>Belanja kebutuhan utama, 
+                <br />menjadi lebih mudah</h2>
               <form method="POST" action="{{ route('login') }}" class="mt-3">
                 @csrf
                 <div class="form-group">
