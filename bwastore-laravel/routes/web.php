@@ -23,8 +23,11 @@ Route::get("/categories/{id}", [App\Http\Controllers\CategoryController::class,"
 Route::get("/details/{id}", [App\Http\Controllers\DetailController::class,"index",])->name("details");
 Route::get("/details/{id}", [App\Http\Controllers\DetailController::class,"add",])->name("details-add");
 
-
 Route::get("/cart", [App\Http\Controllers\CartController::class,"index",])->name("cart");
+Route::delete("/cart/{id}", [App\Http\Controllers\CartController::class,"delete",])->name("cart-delete");
+
+Route::post("/checkout", [ App\Http\Controllers\CheckoutController::class, "process",])->name("checkout");
+Route::post("/checkout/callback", [ App\Http\Controllers\CheckoutController::class, "callback",])->name("midtrans-callback");
 
 Route::get("/success", [ App\Http\Controllers\CartController::class, "success",])->name("success");
 
