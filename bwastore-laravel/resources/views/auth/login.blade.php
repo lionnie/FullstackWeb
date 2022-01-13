@@ -56,7 +56,7 @@
                   >Sign In to My Account
                 </button>
                 <a
-                  href="{{ route('register') }}"
+                  href="{{ route('register-success') }}"
                   class="btn btn-signup btn-block w-75 mt-2"
                   >Sign Up</a
                 >

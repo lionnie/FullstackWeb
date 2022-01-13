@@ -27,7 +27,7 @@
             </li>
             @guest
                 <li class="nav-item">
-                    <a href="{{ route('register') }}" class="nav-link">Sign Up</a>
+                    <a href="{{ route('register-success') }}" class="nav-link">Sign Up</a>
                 </li>
                 <li class="nav-item">
                     <a
